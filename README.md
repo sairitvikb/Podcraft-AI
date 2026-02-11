@@ -3,3 +3,14 @@ End-to-end RAG (Retrieval-Augmented Generation) pipeline for automated podcast g
 ## Overview
 
 PodPress AI transforms newsletters into engaging podcasts using advanced RAG techniques, semantic chunking, prompt engineering, and optimized LLM inference. The system processes 50+ newsletters daily, generating 30-minute podcasts with 35% faster generation time and 40% runtime reduction through intelligent caching and batching.
+## Key Features
+
+- **End-to-End RAG Pipeline**: Semantic chunking, vector embeddings, and retrieval-augmented generation
+- **50+ Newsletters Daily**: Automated processing pipeline handling multiple newsletter sources
+- **35% Generation Time Reduction**: Optimized LLM inference with prompt tuning and batching for ~5,000 words
+- **40% Runtime Reduction**: FastAPI, Redis caching, and ElevenLabs TTS integration
+- **Semantic Chunking**: Advanced text segmentation preserving context and meaning
+- **Prompt Engineering**: Optimized prompts for high-quality podcast generation
+- **FastAPI Deployment**: High-performance REST API with async processing
+- **Redis Caching**: Intelligent caching reducing redundant LLM calls
+- **ElevenLabs TTS**: High-quality text-to-speech integration for podcast audio
