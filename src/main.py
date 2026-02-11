@@ -106,7 +106,8 @@ def process_newsletter(newsletter_input: str, output_dir: str = 'output'):
         logger.info("Generating podcast script...")
         query = f"Create an engaging podcast script summarizing: {newsletter_data['title']}"
         optimized_query = query_optimizer.optimize_query(query, newsletter_data['text'][:200])
-        
+        # Generate optimized podcast script using RAG pipeline
+
         script = rag_pipeline.generate_with_rag(optimized_query, newsletter_data['text'])
         
         os.makedirs(output_dir, exist_ok=True)
