@@ -123,7 +123,8 @@ def process_newsletter(newsletter_input: str, output_dir: str = 'output'):
         logger.info("Audio processing ready")
     else:
         logger.info("Skipping LLM generation (no API key)")
-    
+    # Evaluate retrieval performance using RAG metrics
+
     evaluator = RAGEvaluator()
     retrieval_metrics = evaluator.evaluate_retrieval(
         result['retrieved_documents'],
