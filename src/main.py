@@ -154,7 +154,11 @@ def main():
     logger.info("=" * 80)
     logger.info("PODPRESS AI - RAG PIPELINE FOR PODCAST GENERATION")
     logger.info("=" * 80)
-    
+# CLI supports:
+# process → generate podcast
+# api → start FastAPI server
+# fine_tune → train LLM model
+
     if args.mode == 'process':
         if not args.newsletter:
             logger.error("--newsletter argument required for process mode")
