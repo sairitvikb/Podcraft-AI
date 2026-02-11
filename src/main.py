@@ -76,7 +76,8 @@ def process_newsletter(newsletter_input: str, output_dir: str = 'output'):
     
     query_optimizer = QueryOptimizer(chunker.embedding_model if hasattr(chunker, 'embedding_model') else None)
     query_rewriter = QueryRewriter()
-    
+    # Dynamically select LLM provider based on available API key
+
     api_key = os.getenv('OPENAI_API_KEY') or os.getenv('ANTHROPIC_API_KEY')
     if not api_key:
         logger.warning("No API key found. Using mock LLM inference.")
