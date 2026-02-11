@@ -35,3 +35,16 @@ podcraft_ai/
 │   └── config.yaml
 └── requirements.txt
 ```
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Start API Server
+
+```bash
+python src/api/fastapi_server.py
+```
