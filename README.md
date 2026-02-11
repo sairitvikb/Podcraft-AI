@@ -14,3 +14,24 @@ PodPress AI transforms newsletters into engaging podcasts using advanced RAG tec
 - **FastAPI Deployment**: High-performance REST API with async processing
 - **Redis Caching**: Intelligent caching reducing redundant LLM calls
 - **ElevenLabs TTS**: High-quality text-to-speech integration for podcast audio
+## Project Structure
+
+```
+podpress_ai/
+├── src/
+│   ├── rag/
+│   │   ├── semantic_chunking.py    # Advanced text chunking
+│   │   ├── vector_store.py          # Embedding and retrieval
+│   │   └── retrieval.py              # RAG retrieval logic
+│   ├── llm/
+│   │   ├── prompt_engineering.py   # Optimized prompts
+│   │   ├── inference.py             # Batched LLM inference
+│   │   └── model_manager.py         # LLM model management
+│   ├── api/
+│   │   └── fastapi_server.py        # REST API server
+│   └── audio/
+│       └── tts_integration.py       # ElevenLabs TTS
+├── config/
+│   └── config.yaml
+└── requirements.txt
+```
