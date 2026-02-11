@@ -117,7 +117,8 @@ def process_newsletter(newsletter_input: str, output_dir: str = 'output'):
             f.write(script)
         
         logger.info(f"Podcast script saved to {script_path}")
-        
+        # Initialize audio processing for optional TTS conversion
+
         audio_processor = AudioProcessor()
         logger.info("Audio processing ready")
     else:
