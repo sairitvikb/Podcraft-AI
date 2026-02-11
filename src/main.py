@@ -47,7 +47,11 @@ def process_newsletter(newsletter_input: str, output_dir: str = 'output'):
     
     loader = NewsletterLoader()
     scraper = AdvancedNewsletterScraper()
-    
+# Determine newsletter input type:
+# URL → scrape
+# File path → load
+# Raw text → direct processing
+
     if newsletter_input.startswith('http'):
         newsletter_data = scraper.scrape_newsletter(newsletter_input)
     elif os.path.exists(newsletter_input):
