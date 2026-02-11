@@ -48,3 +48,10 @@ pip install -r requirements.txt
 ```bash
 python src/api/fastapi_server.py
 ```
+### Process Newsletter
+
+```bash
+curl -X POST http://localhost:8000/generate-podcast \
+  -H "Content-Type: application/json" \
+  -d '{"newsletter_url": "https://example.com/newsletter"}'
+```
