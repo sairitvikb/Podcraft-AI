@@ -1,3 +1,7 @@
+# Advanced RAG-based podcast generation pipeline
+# Supports newsletter ingestion, semantic chunking,
+# retrieval augmentation, and LLM-based script generation.
+
 import sys
 from pathlib import Path
 import argparse
@@ -29,6 +33,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
 
 
 def process_newsletter(newsletter_input: str, output_dir: str = 'output'):
