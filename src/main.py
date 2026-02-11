@@ -34,6 +34,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Determine input source:
+# - If URL → scrape newsletter
+# - If file path → load from file
+# - Otherwise → treat as raw text input
 
 
 def process_newsletter(newsletter_input: str, output_dir: str = 'output'):
