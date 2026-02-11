@@ -1,0 +1,39 @@
+rag:
+  chunk_size: 1000
+  chunk_overlap: 200
+  similarity_threshold: 0.7
+  top_k: 5
+  use_reranking: true
+  use_hybrid_search: true
+
+llm:
+  provider: openai
+  model: gpt-4
+  batch_size: 5
+  max_tokens: 2000
+  temperature: 0.7
+  use_fine_tuning: false
+
+vector_store:
+  embedding_model: all-MiniLM-L6-v2
+  collection_name: newsletters
+  persist_directory: data/vector_store
+
+audio:
+  tts_provider: elevenlabs
+  voice_id: 21m00Tcm4TlvDq8ikWAM
+  sample_rate: 22050
+
+optimization:
+  use_batching: true
+  use_async: true
+  use_quantization: false
+  use_torch_compile: false
+
+evaluation:
+  metrics:
+    - precision
+    - recall
+    - f1_score
+    - bleu
+    - rouge
