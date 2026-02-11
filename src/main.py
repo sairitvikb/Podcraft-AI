@@ -109,7 +109,8 @@ def process_newsletter(newsletter_input: str, output_dir: str = 'output'):
         # Generate optimized podcast script using RAG pipeline
 
         script = rag_pipeline.generate_with_rag(optimized_query, newsletter_data['text'])
-        
+        # Ensure output directory exists before saving generated script
+
         os.makedirs(output_dir, exist_ok=True)
         script_path = os.path.join(output_dir, 'podcast_script.txt')
         with open(script_path, 'w', encoding='utf-8') as f:
