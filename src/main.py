@@ -64,7 +64,11 @@ def process_newsletter(newsletter_input: str, output_dir: str = 'output'):
         return
     
     logger.info(f"Loaded newsletter: {newsletter_data['title']} ({newsletter_data['length']} chars)")
-    
+# Initialize RAG components:
+# - Semantic chunker
+# - Vector store
+# - Reranker
+
     chunker = SemanticChunker()
     vector_store = AdvancedVectorStore(persist_directory='data/vector_store')
     reranker = Reranker()
